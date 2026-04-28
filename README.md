@@ -183,25 +183,18 @@ USE dimdim_564928;
 SELECT * FROM transacoes;
 ```
 
-Depois de fazer INSERT na aplicacao:
+Use sempre o mesmo comando para comprovar as operacoes:
 
 ```sql
-SELECT * FROM transacoes ORDER BY id;
+SELECT * FROM transacoes;
 ```
 
-Depois de fazer UPDATE na aplicacao:
+Roteiro simples para o video:
 
-```sql
-SELECT * FROM transacoes WHERE id = 2;
-```
-
-Depois de fazer DELETE na aplicacao:
-
-```sql
-SELECT * FROM transacoes WHERE id = 2;
-```
-
-O ultimo comando deve retornar vazio para comprovar que a linha foi removida.
+1. Faca um INSERT na aplicacao Python e rode `SELECT * FROM transacoes;` no MySQL.
+2. Faca um UPDATE na aplicacao Python e rode `SELECT * FROM transacoes;` no MySQL.
+3. Faca um DELETE na aplicacao Python e rode `SELECT * FROM transacoes;` no MySQL.
+4. Explique que a tabela mostra a linha criada, depois alterada, e depois removida.
 
 ## Acesso ao Adminer
 
