@@ -234,37 +234,6 @@ sudo docker volume ls
 sudo docker network ls
 ```
 
-O PDF deve se chamar:
-
-```text
-cp2_nomeEquipe.pdf
-```
-
-Dentro do PDF inclua:
-
-- Folha de rosto com nome da equipe, RM e nome completo dos integrantes.
-- Print do `docker ps`.
-- Print do `docker image ls`.
-- Print do `docker volume ls`.
-- Print do `docker network ls`.
-- Link do GitHub.
-- Link do video no YouTube.
-
-## Checklist de penalidades
-
-- Volume nomeado: `vol_db_564928`.
-- Rede Docker: `rede_564928`.
-- Container de banco com RM no nome: `db_564928`.
-- Segundo container com RM no nome: `adminer_564928`.
-- Banco de dados em container: MySQL `mysql:8.0`.
-- Portas expostas com `-p`: `3306:3306` e `8080:8080`.
-- Variaveis de ambiente com `-e`: MySQL e Adminer configurados.
-- Containers em segundo plano com `-d`: ambos os containers.
-- Aplicacao Python sem Dockerfile: executada com `python3 app.py`.
-- Configuracao da aplicacao por variaveis de ambiente: `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`.
-- CRUD completo: INSERT, SELECT, UPDATE e DELETE na tabela `transacoes`.
-- Evidencia de cada operacao no banco: comandos `SELECT` apos INSERT, UPDATE e DELETE.
-- Artefatos no GitHub: codigo fonte, SQL, scripts Docker, README e roteiro de video.
 
 ## Limpeza do ambiente
 
