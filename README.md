@@ -29,8 +29,6 @@ cp02_devops/
 │   ├── 02_preparar_python_azure.sh
 │   ├── 03_rodar_app.sh
 │   └── 04_evidencias_mysql.sql
-└── docs/
-    └── roteiro_video.md
 ```
 
 ## Passo 1 - Preparar a VM Azure
