@@ -223,17 +223,6 @@ Banco: dimdim_564928
 
 Esse acesso comprova o segundo container interagindo com o banco pela rede `rede_564928`.
 
-## Comandos obrigatorios para prints do PDF
-
-Use estes comandos para gerar os prints solicitados:
-
-```bash
-sudo docker ps
-sudo docker image ls
-sudo docker volume ls
-sudo docker network ls
-```
-
 
 ## Limpeza do ambiente
 
