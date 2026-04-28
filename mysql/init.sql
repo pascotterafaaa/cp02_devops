@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS dimdim_564928;
+
+USE dimdim_564928;
+
+CREATE TABLE IF NOT EXISTS transacoes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(120) NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    tipo ENUM('ENTRADA', 'SAIDA') NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO transacoes (descricao, valor, tipo)
+VALUES ('Saldo inicial DimDim', 1000.00, 'ENTRADA');
