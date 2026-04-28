@@ -1,6 +1,8 @@
 # CP2 DevOps - Steves Jobs e DimDim
 
-Projeto do 2o Checkpoint de DevOps usando MySQL em container Docker e uma aplicacao Python CRUD rodando diretamente no terminal Linux da VM Azure.
+Este projeto foi desenvolvido para o 2o Checkpoint de DevOps, com foco em demonstrar a comunicacao entre containers Docker e uma aplicacao executada diretamente na VM Azure.
+
+A solucao utiliza um banco MySQL em container, com volume nomeado para persistencia, rede Docker propria e um segundo container Adminer conectado ao mesmo banco. A aplicacao Python realiza um CRUD completo na tabela `transacoes` e roda fora do Docker, diretamente no terminal Linux da VM.
 
 RM do representante: `564928`
 
@@ -54,9 +56,11 @@ No seu diretorio HOME:
 
 ```bash
 cd ~
-git clone https://github.com/pascotterafaaa/cp02_devops.git
+git clone LINK_DO_SEU_REPOSITORIO
 cd cp02_devops
 ```
+
+Se voce ainda nao subiu para o GitHub, copie esta pasta `cp02_devops` para o seu repositorio e faca o push.
 
 ## Passo 3 - Criar a infraestrutura Docker do banco
 
@@ -158,6 +162,48 @@ Menu da aplicacao:
 0 - Sair
 ```
 
+## Opcao alternativa - Usar os scripts
+
+Se preferir automatizar os comandos principais, voce pode usar os scripts da pasta `scripts`.
+
+Antes de rodar os scripts, confirme que voce ja fez estes passos:
+
+1. Instalou Docker, Python, pip e Git na VM.
+2. Clonou o repositorio do GitHub.
+3. Entrou na pasta `cp02_devops`.
+4. Conferiu se o Docker esta rodando.
+
+```bash
+cd ~/cp02_devops
+sudo docker ps
+```
+
+Se os scripts nao estiverem com permissao de execucao, rode:
+
+```bash
+chmod +x scripts/*.sh
+```
+
+Crie a infraestrutura Docker com MySQL, Adminer, rede e volume:
+
+```bash
+sudo ./scripts/01_criar_infra_docker.sh
+```
+
+Prepare o ambiente Python:
+
+```bash
+./scripts/02_preparar_python_azure.sh
+```
+
+Execute a aplicacao:
+
+```bash
+./scripts/03_rodar_app.sh
+```
+
+Esses scripts executam os mesmos comandos descritos no passo a passo manual. Para o video, voce pode usar os scripts ou digitar os comandos manualmente seguindo este README.
+
 ## Evidencias do CRUD pelo MySQL
 
 Entre no MySQL pelo terminal:
@@ -211,7 +257,6 @@ Banco: dimdim_564928
 ```
 
 Esse acesso comprova o segundo container interagindo com o banco pela rede `rede_564928`.
-
 
 ## Limpeza do ambiente
 
