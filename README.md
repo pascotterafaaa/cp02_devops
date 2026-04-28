@@ -58,8 +58,6 @@ git clone https://github.com/pascotterafaaa/cp02_devops.git
 cd cp02_devops
 ```
 
-Se voce ainda nao subiu para o GitHub, copie esta pasta `cp02_devops` para o seu repositorio e faca o push.
-
 ## Passo 3 - Criar a infraestrutura Docker do banco
 
 Crie a rede:
