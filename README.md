@@ -56,7 +56,7 @@ No seu diretorio HOME:
 
 ```bash
 cd ~
-git clone LINK_DO_SEU_REPOSITORIO
+git clone https://github.com/pascotterafaaa/cp02_devops.git
 cd cp02_devops
 ```
 
